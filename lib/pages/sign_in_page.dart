@@ -164,7 +164,9 @@ class SignInPage extends StatelessWidget {
           ),
         ),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/home');
+          },
           child: Text(
             'Login',
             style: primaryTextStyle.copyWith(

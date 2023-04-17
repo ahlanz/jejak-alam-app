@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jejak_alam/pages/home/main_page.dart';
 import 'package:jejak_alam/pages/sign_in_page.dart';
 import 'package:jejak_alam/pages/sign_upPage.dart';
 import 'package:jejak_alam/pages/splash_page.dart';
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => SplashPage(),
         '/sign-in': (context) => SignInPage(),
-        '/sign-Up': (context) => SignUpPage()
+        '/sign-Up': (context) => SignUpPage(),
+        '/home': (context) => MainPage(),
       },
     );
   }
