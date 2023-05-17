@@ -27,14 +27,14 @@ class SignInPage extends StatelessWidget {
                 fontWeight: semibold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             TextFormField(
               decoration: InputDecoration(
                 hintText: 'Enter your email',
                 hintStyle: primaryTextStyle,
-                enabledBorder: UnderlineInputBorder(
+                enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Color(0xff000000),
                   ),
@@ -58,14 +58,14 @@ class SignInPage extends StatelessWidget {
                 fontWeight: semibold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             TextFormField(
               decoration: InputDecoration(
                 hintText: 'Enter your Password',
                 hintStyle: primaryTextStyle,
-                enabledBorder: UnderlineInputBorder(
+                enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Color(0xff000000),
                   ),
@@ -74,7 +74,7 @@ class SignInPage extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   width: 24,
                   height: 24,
-                  child: Icon(Icons.visibility),
+                  child: const Icon(Icons.visibility),
                 ),
               ),
             ),
@@ -117,7 +117,7 @@ class SignInPage extends StatelessWidget {
                 fontWeight: semibold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 14,
             ),
             Row(
@@ -127,7 +127,7 @@ class SignInPage extends StatelessWidget {
                   'assets/icons/icon_google.png',
                   width: 43,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 14,
                 ),
                 Image.asset(
@@ -155,7 +155,7 @@ class SignInPage extends StatelessWidget {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 2,
               blurRadius: 5,
-              offset: Offset(0, 3),
+              offset: const Offset(0, 3),
             ),
           ],
           border: Border.all(
@@ -165,7 +165,8 @@ class SignInPage extends StatelessWidget {
         ),
         child: TextButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/home');
+            Navigator.pushNamedAndRemoveUntil(
+                context, '/home', (route) => false);
           },
           child: Text(
             'Login',
@@ -180,7 +181,7 @@ class SignInPage extends StatelessWidget {
 
     Widget buttonRegister() {
       return Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 10,
         ),
         width: double.infinity,
@@ -218,12 +219,13 @@ class SignInPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          margin: EdgeInsets.only(
+          margin: const EdgeInsets.only(
             top: 50,
             right: 80,
             left: 80,
           ),
           child: SingleChildScrollView(
+            reverse: true,
             child: Column(
               children: [
                 header(),
@@ -232,6 +234,10 @@ class SignInPage extends StatelessWidget {
                 validatorLogin(),
                 buttonLogin(),
                 buttonRegister(),
+                Padding(
+                  padding: EdgeInsets.only(
+                      bottom: MediaQuery.of(context).viewInsets.bottom),
+                ),
               ],
             ),
           ),
