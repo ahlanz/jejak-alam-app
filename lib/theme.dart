@@ -9,7 +9,7 @@ Color bgcolor2 = const Color(0xff1E90FF);
 Color bgcolor3 = const Color(0xff8470FF);
 Color primaryTextColor = const Color(0xff333333);
 Color secondaryTextColor = const Color(0xff0075FF);
-Color cardTextColor = Color(0xffFFFFFF);
+Color cardTextColor = const Color(0xffFFFFFF);
 
 TextStyle primaryTextStyle = GoogleFonts.poppins(color: primaryTextColor);
 TextStyle secondaryTextStyle = GoogleFonts.poppins(color: secondaryTextColor);

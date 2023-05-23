@@ -50,7 +50,9 @@ class _GridDownloadState extends State<GridDownload> {
       itemCount: gridMap.length,
       itemBuilder: (_, index) {
         return GestureDetector(
-          onTap: () {},
+          onTap: () {
+            
+          },
           child: Container(
             width: double.infinity,
             decoration: BoxDecoration(
@@ -101,7 +103,16 @@ class _GridDownloadState extends State<GridDownload> {
                     const SizedBox(
                       height: 27,
                     ),
-                    SizedBox(
+                    Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            blurRadius: 4,
+                            offset: const Offset(0, 0),
+                          ),
+                        ],
+                      ),
                       width: 100,
                       child: TextButton(
                         onPressed: () {},
