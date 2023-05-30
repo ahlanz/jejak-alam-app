@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jejak_alam/pages/home/main_page.dart';
 import 'package:jejak_alam/pages/materi_panduan_page.dart';
+import 'package:jejak_alam/pages/materi_persiapan_page.dart';
 import 'package:jejak_alam/pages/materi_tenda_page.dart';
 import 'package:jejak_alam/pages/sign_in_page.dart';
 import 'package:jejak_alam/pages/sign_upPage.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => MainPage(),
         '/materi-panduan': (context) => MateriPage(),
         '/materi-tenda': (context) => TendaPage(),
+        '/materi-persiapan': (context) => MateriPersiapan(),
       },
     );
   }
