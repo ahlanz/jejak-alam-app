@@ -115,27 +115,32 @@ class MateriPage extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
-            decoration: BoxDecoration(
-              color: const Color(0xffFF5B5B),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            width: double.infinity,
-            height: 150,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Materi\npersiapan',
-                  style: cardTextStyle.copyWith(
-                      fontSize: 30, fontWeight: extrabold),
-                ),
-                Image.asset(
-                  'assets/images/materi_persiapan.png',
-                  width: 120,
-                ),
-              ],
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/materi-persiapan');
+            },
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
+              decoration: BoxDecoration(
+                color: const Color(0xffFF5B5B),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              width: double.infinity,
+              height: 150,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Materi\npersiapan',
+                    style: cardTextStyle.copyWith(
+                        fontSize: 30, fontWeight: extrabold),
+                  ),
+                  Image.asset(
+                    'assets/images/materi_persiapan.png',
+                    width: 120,
+                  ),
+                ],
+              ),
             ),
           ),
           const SizedBox(
