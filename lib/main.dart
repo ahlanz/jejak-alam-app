@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jejak_alam/pages/home/main_page.dart';
+import 'package:jejak_alam/pages/materi_kesehatan_page.dart';
 import 'package:jejak_alam/pages/materi_panduan_page.dart';
 import 'package:jejak_alam/pages/materi_persiapan_page.dart';
 import 'package:jejak_alam/pages/materi_tenda_page.dart';
@@ -18,6 +19,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          iconTheme: IconThemeData(color: Colors.black),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => SplashPage(),
@@ -27,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/materi-panduan': (context) => MateriPage(),
         '/materi-tenda': (context) => TendaPage(),
         '/materi-persiapan': (context) => MateriPersiapan(),
+        '/materi-kesehatan': (context) => MateriKesehatan(),
       },
     );
   }

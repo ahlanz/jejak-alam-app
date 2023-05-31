@@ -40,7 +40,7 @@ class SignUpPage extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: '',
                 hintStyle: primaryTextStyle,
-                enabledBorder: UnderlineInputBorder(
+                enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Color(0xff000000),
                   ),
