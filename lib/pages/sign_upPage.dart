@@ -40,7 +40,7 @@ class SignUpPage extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: '',
                 hintStyle: primaryTextStyle,
-                enabledBorder: UnderlineInputBorder(
+                enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Color(0xff000000),
                   ),
@@ -184,6 +184,7 @@ class SignUpPage extends StatelessWidget {
             horizontal: 40,
           ),
           child: SingleChildScrollView(
+            reverse: true,
             child: Column(
               children: [
                 header(),
@@ -192,6 +193,10 @@ class SignUpPage extends StatelessWidget {
                 inputPassword(),
                 inputKonfirm(),
                 buttonRegister(),
+                Padding(
+                  padding: EdgeInsets.only(
+                      bottom: MediaQuery.of(context).viewInsets.bottom),
+                ),
               ],
             ),
           ),

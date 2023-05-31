@@ -14,13 +14,11 @@ class HomePage extends StatelessWidget {
       return AppBar(
         backgroundColor: bgcolor1,
         elevation: 0,
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.menu,
-            color: primaryTextColor,
-          ),
-        ),
+        // leading:Icon(
+        //     Icons.menu,
+        //     color: primaryTextColor,
+        //   ),
+
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 8.0),
@@ -108,15 +106,160 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget listDrawer() {
+      return Container(
+        width: double.infinity,
+        margin: EdgeInsets.only(top: defaultMargin),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(
+                  Icons.navigation,
+                  color: primaryTextColor,
+                ),
+                const SizedBox(
+                  width: 8,
+                ),
+                Text(
+                  'Mulai Mendaki',
+                  style: primaryTextStyle.copyWith(
+                    fontSize: 12,
+                    fontWeight: medium,
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 17,
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.bookmark,
+                  color: primaryTextColor,
+                ),
+                const SizedBox(
+                  width: 8,
+                ),
+                Text(
+                  'Tersimpan',
+                  style: primaryTextStyle.copyWith(
+                    fontSize: 12,
+                    fontWeight: medium,
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 17,
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.save,
+                  color: primaryTextColor,
+                ),
+                const SizedBox(
+                  width: 8,
+                ),
+                Text(
+                  'Download Peta offline',
+                  style: primaryTextStyle.copyWith(
+                    fontSize: 12,
+                    fontWeight: medium,
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 17,
+            ),
+            Row(
+              children: const [
+                Icon(
+                  Icons.logout,
+                  color: Colors.red,
+                ),
+                SizedBox(
+                  width: 8,
+                ),
+                Text(
+                  'Log out',
+                  style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 80.0,
+            ),
+            const Divider(
+              thickness: 1,
+              color: Colors.black,
+            ),
+            const Text(
+              'Bantuan',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.normal,
+                color: Colors.grey,
+              ),
+            )
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: barCustom(),
+      drawer: Drawer(
+        
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(
+            horizontal: 30.0,
+            vertical: 15,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Image.asset(
+                'assets/images/jejak_logo.png',
+                width: 90,
+              ),
+              SizedBox(
+                width: 250,
+                child: Text(
+                  'Jejak Alam',
+                  style: primaryTextStyle.copyWith(
+                    fontSize: 15,
+                    fontWeight: extrabold,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 3,
+              ),
+              const Divider(
+                thickness: 2,
+                color: Colors.black,
+              ),
+              listDrawer()
+            ],
+          ),
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               header(),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               searchBar(),
