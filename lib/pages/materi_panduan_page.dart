@@ -146,28 +146,33 @@ class MateriPage extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
-            decoration: BoxDecoration(
-              color: const Color(0xffB4AAF2),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            width: double.infinity,
-            height: 150,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Materi\nkesehatan\nmendaki',
-                  overflow: TextOverflow.visible,
-                  style: cardTextStyle.copyWith(
-                      fontSize: 30, fontWeight: extrabold),
-                ),
-                Image.asset(
-                  'assets/images/materi_kesehatan.png',
-                  width: 120,
-                ),
-              ],
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/materi-kesehatan');
+            },
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
+              decoration: BoxDecoration(
+                color: const Color(0xffB4AAF2),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              width: double.infinity,
+              height: 150,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Materi\nkesehatan\nmendaki',
+                    overflow: TextOverflow.visible,
+                    style: cardTextStyle.copyWith(
+                        fontSize: 30, fontWeight: extrabold),
+                  ),
+                  Image.asset(
+                    'assets/images/materi_kesehatan.png',
+                    width: 120,
+                  ),
+                ],
+              ),
             ),
           ),
         ],
