@@ -4,9 +4,12 @@ import 'package:jejak_alam/pages/materi_kesehatan_page.dart';
 import 'package:jejak_alam/pages/materi_panduan_page.dart';
 import 'package:jejak_alam/pages/materi_persiapan_page.dart';
 import 'package:jejak_alam/pages/materi_tenda_page.dart';
+import 'package:jejak_alam/pages/perkiraan_cuaca_page.dart';
+import 'package:jejak_alam/pages/rekomendasi_toko_page.dart';
 import 'package:jejak_alam/pages/sign_in_page.dart';
 import 'package:jejak_alam/pages/sign_upPage.dart';
 import 'package:jejak_alam/pages/splash_page.dart';
+import 'package:jejak_alam/pages/toko_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,14 +29,17 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => SplashPage(),
-        '/sign-in': (context) => SignInPage(),
-        '/sign-Up': (context) => SignUpPage(),
-        '/home': (context) => MainPage(),
-        '/materi-panduan': (context) => MateriPage(),
-        '/materi-tenda': (context) => TendaPage(),
-        '/materi-persiapan': (context) => MateriPersiapan(),
-        '/materi-kesehatan': (context) => MateriKesehatan(),
+        '/': (context) => const SplashPage(),
+        '/sign-in': (context) => const SignInPage(),
+        '/sign-Up': (context) => const  SignUpPage(),
+        '/home': (context) => const  MainPage(),
+        '/materi-panduan': (context) => const MateriPage(),
+        '/materi-tenda': (context) => const TendaPage(),
+        '/materi-persiapan': (context) => const MateriPersiapan(),
+        '/materi-kesehatan': (context) =>const  MateriKesehatan(),
+        '/cuaca-page': (context) =>const  CuacaPage(),
+        '/rekomendasi-toko': (context) =>const  RekomendasiToko(),
+        '/toko-page': (context) =>const  TokoPage(),
       },
     );
   }
