@@ -74,22 +74,27 @@ class _CardSliderState extends State<CardSlider> {
         ),
       ),
       Card(
-        child: Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 22,
-            vertical: 15,
-          ),
-          width: 200,
-          height: 200,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            color: primaryColor,
-          ),
-          child: Text(
-            'Rekomendasi \nToko Alat \nsewa',
-            style: cardTextStyle.copyWith(
-              fontSize: 25,
-              fontWeight: extrabold,
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, '/rekomendasi-toko');
+          },
+          child: Container(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 22,
+              vertical: 15,
+            ),
+            width: 200,
+            height: 200,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              color: primaryColor,
+            ),
+            child: Text(
+              'Rekomendasi \nToko Alat \nsewa',
+              style: cardTextStyle.copyWith(
+                fontSize: 25,
+                fontWeight: extrabold,
+              ),
             ),
           ),
         ),
